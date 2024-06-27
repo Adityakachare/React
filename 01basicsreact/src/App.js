@@ -1,5 +1,12 @@
+import User from "./User";
+
 function App() {
-  return <h1>REACT </h1>;
+  return (
+    <>
+      <User />
+      <h1>REACT </h1>;
+    </>
+  );
 }
 
 export default App;
