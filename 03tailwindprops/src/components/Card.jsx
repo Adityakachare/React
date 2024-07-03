@@ -1,4 +1,6 @@
-function Card({ name, btext="Visit Me" }) {
+import PropTypes from "prop-types";
+
+function Card({ name, btext = "Visit Me" }) {
   console.log("PROPS", name);
   return (
     <div className="relative h-[400px] w-[300px] rounded-md">
@@ -15,11 +17,16 @@ function Card({ name, btext="Visit Me" }) {
           debitis?
         </p>
         <button className="mt-2 inline-flex cursor-pointer items-center text-sm font-semibold text-white">
-          {btext }
+          {btext}
         </button>
       </div>
     </div>
   );
 }
+
+Card.propTypes = {
+  name: PropTypes.string.isRequired,
+  btext: PropTypes.string,
+};
 
 export default Card;
